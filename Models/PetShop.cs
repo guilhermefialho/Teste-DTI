@@ -4,7 +4,7 @@ namespace TesteDTI {
 public class MeuCaninoFelizCalculator
 {
 
-    public decimal DistanceToCanil = 2m;
+    public decimal DistanceToCanil = 2.00m;
     public decimal CalculateCost(DateTime date, int numSmallDogs, int numLargeDogs)
     {
         bool isWeekend = date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday;
@@ -17,7 +17,7 @@ public class MeuCaninoFelizCalculator
 public class VaiRexCalculator
 {
 
-    public decimal DistanceToCanil = 1.7m;
+    public decimal DistanceToCanil = 1.70m;
     public decimal CalculateCost(DateTime date, int numSmallDogs, int numLargeDogs)
     {
         bool isWeekend = date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday;
@@ -30,7 +30,7 @@ public class VaiRexCalculator
 public class ChowChawgasCalculator
 {      
 
-    public decimal DistanceToCanil = 0.8m;
+    public decimal DistanceToCanil = 0.80m;
     public decimal CalculateCost(int numSmallDogs, int numLargeDogs)
     {
         decimal costSmallDogs = 30.00m * numSmallDogs;

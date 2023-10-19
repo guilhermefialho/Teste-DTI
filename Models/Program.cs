@@ -36,8 +36,8 @@ if (
         custoMeuCaninoFeliz < menorCustoTotal
         || (
             custoMeuCaninoFeliz == menorCustoTotal
-            && meuCaninoFelizCalculator.DistanceToCanil < vaiRexCalculator.DistanceToCanil
-            && meuCaninoFelizCalculator.DistanceToCanil < chowChawgasCalculator.DistanceToCanil
+            && meuCaninoFelizCalculator.DistanceToCanil > vaiRexCalculator.DistanceToCanil
+            && meuCaninoFelizCalculator.DistanceToCanil > chowChawgasCalculator.DistanceToCanil
         )
     )
     {
@@ -52,7 +52,7 @@ if (
         || (
             custoVaiRex == menorCustoTotal
             && vaiRexCalculator.DistanceToCanil < meuCaninoFelizCalculator.DistanceToCanil
-            && vaiRexCalculator.DistanceToCanil < chowChawgasCalculator.DistanceToCanil
+            && vaiRexCalculator.DistanceToCanil > chowChawgasCalculator.DistanceToCanil
         )
     )
     {
