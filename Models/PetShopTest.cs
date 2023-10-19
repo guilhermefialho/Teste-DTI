@@ -19,7 +19,7 @@ namespace TesteDTI
             decimal cost = calculator.CalculateCost(date, numSmallDogs, numLargeDogs);
 
             // Assert
-            Assert.AreEqual(260m, cost); // O custo esperado para uma sexta-feira com 3 cães pequenos e 5 cães grandes
+            Assert.That(cost, Is.EqualTo(260m)); // O custo esperado para uma sexta-feira com 3 cães pequenos e 5 cães grandes
         }
 
         [Test]
@@ -35,7 +35,7 @@ namespace TesteDTI
             decimal cost = calculator.CalculateCost(date, numSmallDogs, numLargeDogs);
 
             // Assert
-            Assert.AreEqual(312m, cost); // O custo esperado para um domingo com 3 cães pequenos e 5 cães grandes
+            Assert.That(cost, Is.EqualTo(312m)); // O custo esperado para um domingo com 3 cães pequenos e 5 cães grandes
         }
     }
 
@@ -55,7 +55,7 @@ namespace TesteDTI
             decimal cost = calculator.CalculateCost(date, numSmallDogs, numLargeDogs);
 
             // Assert
-            Assert.AreEqual(295.00m, cost); // O custo esperado para uma sexta-feira com 3 cães pequenos e 5 cães grandes
+            Assert.That(cost, Is.EqualTo(295.00m)); // O custo esperado para uma sexta-feira com 3 cães pequenos e 5 cães grandes
         }
 
         [Test]
@@ -71,7 +71,7 @@ namespace TesteDTI
             decimal cost = calculator.CalculateCost(date, numSmallDogs, numLargeDogs);
 
             // Assert
-            Assert.AreEqual(335.00m, cost); // O custo esperado para um domingo com 3 cães pequenos e 5 cães grandes
+            Assert.That(cost, Is.EqualTo(335.00m)); // O custo esperado para um domingo com 3 cães pequenos e 5 cães grandes
         }
     }
 
@@ -90,7 +90,7 @@ namespace TesteDTI
             decimal cost = calculator.CalculateCost(numSmallDogs, numLargeDogs);
 
             // Assert
-            Assert.AreEqual(315.00m, cost); // O custo esperado para 3 cães pequenos e 5 cães grandes em qualquer dia da semana
+            Assert.That(cost, Is.EqualTo(315.00m)); // O custo esperado para 3 cães pequenos e 5 cães grandes em qualquer dia da semana
         }
     }
 }
