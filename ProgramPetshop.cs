@@ -1,5 +1,6 @@
 using System;
-using TesteDTI;
+using TesteDTI.Services;
+
 
 Console.Write("Entre com a data (dd/mm/yyyy): ");
 string dataInput = Console.ReadLine();
