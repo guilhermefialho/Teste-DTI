@@ -24,62 +24,31 @@ if (
     Console.Write("Quantidade de cães grandes: ");
     int numLargeDogs = int.Parse(Console.ReadLine());
 
-    // Instância dos calculadores de custo para cada petshop.
-    MeuCaninoFelizCalculator meuCaninoFelizCalculator = new MeuCaninoFelizCalculator();
-    VaiRexCalculator vaiRexCalculator = new VaiRexCalculator();
-    ChowChawgasCalculator chowChawgasCalculator = new ChowChawgasCalculator();
+    // Cria um array de calculadores de custo de petshop (interface IPetshopCalculator).
+    IPetshopCalculator[] petshops = new IPetshopCalculator[]
+    {
+        new MeuCaninoFeliz(),
+        new VaiRex(),
+        new ChowChawgas()
+    };
 
-    // Inicialização de variáveis para rastrear o menor custo total e o melhor petshop.
+    // Inicializa variáveis para rastrear o menor custo total e o melhor petshop.
     decimal menorCustoTotal = decimal.MaxValue;
     string melhorPetshop = "";
 
-    // Cálculo e comparação de custos com o petshop "Meu Canino Feliz".
-    decimal custoMeuCaninoFeliz = meuCaninoFelizCalculator.CalculateCost(
-        data,
-        numSmallDogs,
-        numLargeDogs
-    );
-    if (
-        custoMeuCaninoFeliz < menorCustoTotal
-        || (
-            custoMeuCaninoFeliz == menorCustoTotal
-            && meuCaninoFelizCalculator.DistanceToCanil > vaiRexCalculator.DistanceToCanil
-            && meuCaninoFelizCalculator.DistanceToCanil > chowChawgasCalculator.DistanceToCanil
-        )
-    )
+    // Itera sobre os petshops para calcular e comparar custos.
+    foreach (var petshop in petshops)
     {
-        menorCustoTotal = custoMeuCaninoFeliz;
-        melhorPetshop = "Meu Canino Feliz";
-    }
+        // Calcula o custo do petshop atual.
+        decimal custoPetshop = petshop.CalculateCost(data, numSmallDogs, numLargeDogs);
 
-    // Cálculo e comparação de custos com o petshop "Vai Rex".
-    decimal custoVaiRex = vaiRexCalculator.CalculateCost(data, numSmallDogs, numLargeDogs);
-    if (
-        custoVaiRex < menorCustoTotal
-        || (
-            custoVaiRex == menorCustoTotal
-            && vaiRexCalculator.DistanceToCanil < meuCaninoFelizCalculator.DistanceToCanil
-            && vaiRexCalculator.DistanceToCanil > chowChawgasCalculator.DistanceToCanil
-        )
-    )
-    {
-        menorCustoTotal = custoVaiRex;
-        melhorPetshop = "Vai Rex";
-    }
-
-    // Cálculo e comparação de custos com o petshop "ChowChawgas".
-    decimal custoChowChawgas = chowChawgasCalculator.CalculateCost(numSmallDogs, numLargeDogs);
-    if (
-        custoChowChawgas < menorCustoTotal
-        || (
-            custoChowChawgas == menorCustoTotal
-            && chowChawgasCalculator.DistanceToCanil < meuCaninoFelizCalculator.DistanceToCanil
-            && chowChawgasCalculator.DistanceToCanil < vaiRexCalculator.DistanceToCanil
-        )
-    )
-    {
-        menorCustoTotal = custoChowChawgas;
-        melhorPetshop = "ChowChawgas";
+        // Compara o custo atual com o menor custo registrado.
+        if (custoPetshop < menorCustoTotal || (custoPetshop == menorCustoTotal && petshop.DistanceToCanil < petshops[0].DistanceToCanil))
+        {
+            // Atualiza o menor custo total e o nome do melhor petshop.
+            menorCustoTotal = custoPetshop;
+            melhorPetshop = petshop.GetType().Name;
+        }
     }
 
     // Exibe o resultado com o petshop de menor custo total.

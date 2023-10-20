@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OGNSchKTVNiOg1evIli4qhve+F2XCw2P22QhczTY0DY6fmP9LEtgTSUIi4YHunLAle40ygvzY/MX82RpDguTCQ==",
+  "dgSpecHash": "/1sbFFN2q2IEgU6KvRYWNnETWxzuyGocSRqWN4OVH+0mJOXNhjkQeAlLzClKcpo3U+L1tc61HhdZLZ8jbbn0ew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\guilh\\Documents\\Projetos GitHub\\Teste-DTI\\Teste DTI 2.csproj",
+  "projectFilePath": "C:\\Users\\guilh\\Downloads\\Teste-DTI-main (2)\\Teste-DTI-main\\Teste DTI 2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guilh\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

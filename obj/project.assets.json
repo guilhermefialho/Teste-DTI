@@ -3973,11 +3973,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guilh\\Documents\\Projetos GitHub\\Teste-DTI\\Teste DTI 2.csproj",
+      "projectUniqueName": "C:\\Users\\guilh\\Downloads\\Teste-DTI-main (2)\\Teste-DTI-main\\Teste DTI 2.csproj",
       "projectName": "Teste DTI 2",
-      "projectPath": "C:\\Users\\guilh\\Documents\\Projetos GitHub\\Teste-DTI\\Teste DTI 2.csproj",
+      "projectPath": "C:\\Users\\guilh\\Downloads\\Teste-DTI-main (2)\\Teste-DTI-main\\Teste DTI 2.csproj",
       "packagesPath": "C:\\Users\\guilh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guilh\\Documents\\Projetos GitHub\\Teste-DTI\\obj\\",
+      "outputPath": "C:\\Users\\guilh\\Downloads\\Teste-DTI-main (2)\\Teste-DTI-main\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

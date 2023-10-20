@@ -2,10 +2,10 @@ using System;
 
 
 namespace TesteDTI.Services{
-public class VaiRexCalculator
+public class VaiRex : IPetshopCalculator
 {
 
-    public decimal DistanceToCanil = 1.70m;
+    public decimal DistanceToCanil { get; } = 1.70m;
     public decimal CalculateCost(DateTime date, int numSmallDogs, int numLargeDogs)
     {
         bool isWeekend = date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday; // Verifica se a data fornecida é um fim de semana (sábado ou domingo).

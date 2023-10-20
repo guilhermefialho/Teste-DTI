@@ -2,11 +2,11 @@ using System;
 
 
 namespace TesteDTI.Services {
-public class ChowChawgasCalculator
+public class ChowChawgas : IPetshopCalculator
 {      
 
-    public decimal DistanceToCanil = 0.80m;
-    public decimal CalculateCost(int numSmallDogs, int numLargeDogs)
+    public decimal DistanceToCanil { get; } = 0.80m;
+     public decimal CalculateCost(DateTime date, int numSmallDogs, int numLargeDogs)
     {
         decimal costSmallDogs = 30.00m * numSmallDogs;
         decimal costLargeDogs = 45.00m * numLargeDogs;

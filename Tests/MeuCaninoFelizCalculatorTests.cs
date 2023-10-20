@@ -11,7 +11,7 @@ namespace TesteDTI.Tests
         public void CalculateCost_CalculateCostOnWeekday_ShouldReturnCorrectCost()
         {
             // Arrange
-            var calculator = new MeuCaninoFelizCalculator();
+            var calculator = new MeuCaninoFeliz();
             var date = new DateTime(2023, 10, 20); // Uma sexta-feira
             int numSmallDogs = 3;
             int numLargeDogs = 5;
@@ -27,7 +27,7 @@ namespace TesteDTI.Tests
         public void CalculateCost_CalculateCostOnWeekend_ShouldReturnCorrectCost()
         {
             // Arrange
-            var calculator = new MeuCaninoFelizCalculator();
+            var calculator = new MeuCaninoFeliz();
             var date = new DateTime(2023, 10, 22); // Um domingo
             int numSmallDogs = 3;
             int numLargeDogs = 5;
